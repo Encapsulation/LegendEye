@@ -9,6 +9,9 @@ Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation
 
 > Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
 
+> **VirusTotal:** [0 of 55 security vendors flagged it](https://www.virustotal.com/gui/file/145eea622a7467aee66dcda51d882ad13914f4a1a01fca545eb78fb694e057a9).  
+> SHA256: `145eea622a7467aee66dcda51d882ad13914f4a1a01fca545eb78fb694e057a9`
+
 ## Requirements
 - Windows 10 or 11 (64-bit)
 - Bigscreen Beyond 2e with its eye-tracking cameras
