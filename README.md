@@ -36,3 +36,12 @@ Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation
 
 ## License
 Free to use; all rights reserved. See LICENSE.txt. Third-party components are listed in THIRD_PARTY_NOTICES.txt.
+
+## Star History
+<a href="https://www.star-history.com/#Encapsulation/LegendEye&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Encapsulation/LegendEye&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Encapsulation/LegendEye&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Encapsulation/LegendEye&type=Date" />
+  </picture>
+</a>
