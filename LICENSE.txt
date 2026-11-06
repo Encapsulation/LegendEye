@@ -1,0 +1,37 @@
+LegendEye 1.0.0
+Copyright (c) 2026 LegendEye. All rights reserved.
+
+END-USER LICENSE
+
+1. Permission. LegendEye is free to use. You may use it for personal and
+   commercial streaming and VR use, on your own computers, at no charge.
+
+2. Restrictions. You may not:
+   - redistribute, sell, rent, lease, or sublicense LegendEye or any part of it;
+   - modify it or create derivative works from it;
+   - decompile, disassemble, or reverse engineer it, or try to get at its
+     source code;
+   - extract, copy, or convert any model, data file, or other asset in it;
+   - use LegendEye, its models, or anything it outputs to train, tune, or
+     evaluate any other model or machine-learning system.
+
+3. Ownership. LegendEye is licensed, not sold. All rights not expressly
+   granted here are reserved.
+
+4. No warranty. LegendEye is provided "as is", without warranty of any kind,
+   express or implied, including merchantability, fitness for a particular
+   purpose, and non-infringement.
+
+5. Limit of liability. To the maximum extent permitted by law, the
+   authors and copyright holders are not liable for any claim, damages, or
+   other liability, including indirect, incidental, or consequential damages
+   (such as lost data or lost profits), arising from the use of or inability
+   to use LegendEye.
+
+6. Third-party components. LegendEye includes third-party components that
+   are licensed under their own terms. They are listed in
+   THIRD_PARTY_NOTICES.txt. Nothing in this license limits your rights under
+   those terms.
+
+7. Termination. This license ends automatically if you break its terms.
+   Then you must stop using LegendEye and delete all copies.
