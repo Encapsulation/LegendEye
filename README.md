@@ -1,6 +1,6 @@
 # LegendEye
 
-![LegendEye](docs/hero.png)
+![LegendEye](docs/hero_v2.png)
 
 Eye tracking for VRChat on the **Bigscreen Beyond 2e**. Free to use.
 
