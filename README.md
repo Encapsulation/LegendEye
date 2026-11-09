@@ -9,8 +9,8 @@ Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation
 
 > Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
 
-> **VirusTotal (v2.0):** [0 of 68 security vendors flagged it](https://www.virustotal.com/gui/file/0fe8aed0f76d094480ab26a004b8a62cfbd1a47748c2acfb88fbb8ad5feb21b4).  
-> SHA256: `0fe8aed0f76d094480ab26a004b8a62cfbd1a47748c2acfb88fbb8ad5feb21b4`
+> **VirusTotal (v2.0.1):** [0 of 68 security vendors flagged it](https://www.virustotal.com/gui/file/a2644ef39f29ab762e8048578604b0fb906965c9f1235f44077830d8243a577a).  
+> SHA256: `a2644ef39f29ab762e8048578604b0fb906965c9f1235f44077830d8243a577a`
 
 ## Requirements
 - Windows 10 or 11 (64-bit)
