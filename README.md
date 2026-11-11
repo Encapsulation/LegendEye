@@ -43,11 +43,6 @@ Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation
 - Optional calibration report in Export logs, so tracking problems can be fixed for your eyes
 - Runs on the GPU by default (DirectML: NVIDIA, AMD or Intel), with automatic CPU fallback
 
-## How the numbers were measured
-- Gaze: one tester on one Beyond 2e, 9 dots per session, with every app scored after the same per-axis fit on the other 8 dots. LegendEye is two sessions pooled, using its personal calibration. Babble used an older per-user calibration.
-- Blink detail: the in-between eyelid levels each app sent per eye during 10 cued blinks, averaged across both eyes. One tester. Bigscreen sends one shared value for both eyes.
-- Internal latency: camera frame to VRChat-ready. Bigscreen's figure is only the output hand-off that can be measured, so its true total is higher. PaperTracker's is estimated from a dot-jump test.
-
 ## Help
 - Report problems at [Issues](https://github.com/Encapsulation/LegendEye/issues). In the app, click **About** and then **Export logs**, and attach the zip.
 
