@@ -14,7 +14,6 @@ Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation
 > Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
 
 > **VirusTotal (v3.0.0):** [1 of 69 security vendors flagged it](https://www.virustotal.com/gui/file/fdf709662fbb63d1f9fc876e257bce8d390b28f6c70fc943e5013bddbd146a8f).  
-> Trapmine reports "Suspicious.low.ml.score". The cause has not been confirmed.  
 > SHA256: `fdf709662fbb63d1f9fc876e257bce8d390b28f6c70fc943e5013bddbd146a8f`
 
 ## Requirements
