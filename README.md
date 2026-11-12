@@ -43,6 +43,13 @@ Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation
 - Optional calibration report in Export logs, so tracking problems can be fixed for your eyes
 - Runs on the GPU by default (DirectML: NVIDIA, AMD or Intel), with automatic CPU fallback
 
+## Using LegendEye with Babble (VRCFaceTracking)
+LegendEye talks to VRChat on its own. If you also use a mouth tracker such as Babble through VRCFaceTracking (VRCFT), install the LegendEye VRCFT module, so VRCFT combines LegendEye's eyes with Babble's mouth. VRChat accepts only one face tracking message at a time: without the module, the two overwrite each other.
+1. Download `LegendEye-VRCFT-Module-1.0.0.zip` from the [module release](https://github.com/Encapsulation/LegendEye/releases/tag/vrcft-module-1.0.0) and install it in VRCFT: **Module Registry**, then the **Install from .zip** button next to the search box. Avatars set up for VRChat's native face tracking need a VRCFT version that sends it.
+2. In LegendEye: **Settings > VRChat**, set **OSC port** to `9400` and **Native face** to **Always**.
+3. In VRCFT, keep **LegendEye above Babble** in the module list. In Babble, turn its own eye tracking off.
+4. Start LegendEye, Babble and VRCFT. Eyes, blinks and pupils come from LegendEye, the mouth from Babble. VRCFT adds about 6 ms; without a mouth tracker, keep the normal setup (no module) for the lowest latency.
+
 ## Help
 - Report problems at [Issues](https://github.com/Encapsulation/LegendEye/issues). In the app, click **About** and then **Export logs**, and attach the zip.
 
