@@ -16,7 +16,6 @@ Eye tracking for VRChat on the **Bigscreen Beyond 2e**. Free to use.
 - **Pro calibration** maps the edge of your vision and sets up squint, widen and brows.
 - **Choose your calibration:** each new calibration is tested against your current one, and you pick which to keep.
 - **Field of view report:** how far each eye turns and what each eye sees, with IPD and fit insights. Saved as PNG, PDF, CSV or JSON.
-- Squint rises gradually, brows don't trigger widen, and widen stays steady through a session.
 - **Profiles** save your settings under a name, and every settings card has its own Reset button.
 - **GPU choice:** Auto, a specific GPU, or the CPU.
 - **Babble support:** [VRCFT module 1.1.0](https://github.com/Encapsulation/LegendEye/releases/tag/vrcft-module-1.1.0) adds squint, widen and brows alongside Babble's mouth tracking.
