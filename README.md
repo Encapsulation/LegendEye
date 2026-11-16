@@ -11,24 +11,26 @@ https://github.com/user-attachments/assets/6669fe4a-ca21-4385-8b5a-49e3ea01fefb
 
 Eye tracking for VRChat on the **Bigscreen Beyond 2e**. Free to use.
 
-## What's new in 4.0
-- **Squint, widen, and experimental brows** are tracked from the eye cameras and sent to your avatar, each set up for your own face.
-- **Pro calibration** maps the edge of your vision and sets up squint, widen and brows.
-- **Choose your calibration:** each new calibration is tested against your current one, and you pick which to keep.
-- **Field of view report:** how far each eye turns and what each eye sees, with IPD and fit insights. Saved as PNG, PDF, CSV or JSON.
-- **Profiles** save your settings under a name, and every settings card has its own Reset button.
-- **GPU choice:** Auto, a specific GPU, or the CPU.
-- **Babble support:** [VRCFT module 1.1.0](https://github.com/Encapsulation/LegendEye/releases/tag/vrcft-module-1.1.0) adds squint, widen and brows alongside Babble's mouth tracking.
+## What's new in 4.1.0
+- Every new calibration is put in use right away, and **Switch to my earlier calibration** flips between your newest and earlier one.
+- Advanced adds a brows-up sweep and a frown sweep when Brows is ticked, so gaze stays steadier while your brows move.
+- Simple's path is one smooth path you can resize in its preview.
+- **Spoken instructions** is On or Off, and calibration runs at one quicker pace.
+- Training carries on through a graphics driver reset and through SteamVR closing. If LegendEye closes mid-training, **Finish training** picks it up from the recording.
+- The training screen shows its stage, elapsed time and time left.
+- The chart and the time shown for each calibration follow the options you tick.
+- Every setting has a hover text, and settings that did nothing are gone.
+- **Calibrate again** takes you back to the setup.
 
-Updating: replace LegendEye.exe. Your settings and calibration are kept. Calibrate once to set up squint, widen and brows.
+Updating: replace LegendEye.exe. Your settings and calibration are kept.
 
 ## Download
 Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation/LegendEye/releases/latest). It's a single file: no installer, nothing to unpack.
 
 > Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
 
-> **VirusTotal (v4.0.0):** [1 of 69 vendors flagged it](https://www.virustotal.com/gui/file/813f46a0130e5ac38ed88e0b57a542226839b623a2e95c44d3c60560deb5f41f).  
-> SHA256: `813f46a0130e5ac38ed88e0b57a542226839b623a2e95c44d3c60560deb5f41f`
+> **VirusTotal (v4.1.0):** [1 of 69 security vendors flagged it](https://www.virustotal.com/gui/file/72097e26e0121ec0666e660e274642a6590856ea823cb7b344580c4ef2a428ef).  
+> SHA256: `72097e26e0121ec0666e660e274642a6590856ea823cb7b344580c4ef2a428ef`
 >
 > The single hit is Trapmine "Malicious.moderate.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
 
@@ -40,7 +42,7 @@ Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation
 
 ## Getting started
 1. Run LegendEye.exe and press **Start**. It talks to VRChat directly (OSC), with no extra software needed.
-2. Press **Calibrate**, pick **Simple**, **Advanced** or **Pro**, and tick the expressions to set up (widen, squint, brows). Follow the voice: keep your head still and follow the dot with your eyes. Simple takes about 3 minutes; then your personal eye model trains automatically and is used from then on.
+2. Press **Calibrate**, pick **Simple** or **Advanced**, and tick the expressions to set up (widen, squint, brows). Follow the voice: keep your head still and follow the dot with your eyes. Simple takes about 3 minutes; then your personal eye model trains automatically and is used from then on.
 3. Optional: let LegendEye start with SteamVR. It then waits in the tray, ready whenever you are.
 
 > Check the eye camera feeds in LegendEye before each session. The white glow near the edges is normal; dust, skin, and other contamination and debris near the center can cause issues, especially during calibration. If the center isn't clear, a lens puffer brush works best. Otherwise wipe gently with the included microfiber cloth; for stubborn debris, wrap the cloth over a blunted toothpick. Never use liquids or cleaning agents.
@@ -48,7 +50,7 @@ Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation
 ## Features
 - Gaze, eyelids (with winks and blinks) and pupil size for any VRChat avatar with eye tracking
 - Widen, squint and brows, set up for your eyes in your calibration, each with its own switch, sensitivity, start point and output range
-- A head-still calibration that personalizes the eye model to you: Simple, Advanced with paths fitted to your gaze range, or Pro (Advanced plus widen and squint at nine dots)
+- A head-still calibration that personalizes the eye model to you: Simple, or Advanced with paths fitted to your gaze range
 - Field of view check: how far your eyes turn and what each eye sees, as a report
 - Settings profiles, and a Reset button on every settings card
 - Easy mode with live readouts; Advanced mode with filters, per-eye lid tuning (closed / open levels), horizontal and vertical eye movement scale and limit, near convergence, and the avatar's pupil size and reaction
