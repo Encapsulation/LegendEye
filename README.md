@@ -1,14 +1,13 @@
+![LegendEye](docs/hero_v2.png)
+
+https://github.com/user-attachments/assets/e355732c-f763-4491-8cbc-104bee171a90
+
 
 
 https://github.com/user-attachments/assets/6669fe4a-ca21-4385-8b5a-49e3ea01fefb
 
-
-
-https://github.com/user-attachments/assets/e355732c-f763-4491-8cbc-104bee171a90
-
 # LegendEye
 
-![LegendEye](docs/hero_v2.png)
 
 Eye tracking for VRChat on the **Bigscreen Beyond 2e**. Free to use.
 
