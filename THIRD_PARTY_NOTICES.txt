@@ -1,4 +1,4 @@
-LegendEye 1.1.0 - Third-Party Notices
+LegendEye 4.0.0 - Third-Party Notices
 
 LegendEye includes the third-party software components listed below. Each component
 is used under its own license. The full license text or required notice for every
@@ -21,6 +21,7 @@ SUMMARY
  9  OpenCvSharp4 (managed wrapper)              4.13.0.20260627       Apache-2.0
  10 OpenCV native runtime (slim) / OpenCV       4.13.0                Apache-2.0
  11 Libraries bundled in the OpenCV runtime     see section 11        zlib, BSD, libpng, libtiff, IJG, Intel
+ 12 Microsoft Visual C++ runtime (vc folder)    14.44.35211           Microsoft VS 2022 Distributable Code
  13 Valve OpenVR API (openvr_api.dll)           1.1.1                 BSD-3-Clause
 
 ==============================================================================
@@ -14078,6 +14079,24 @@ courts sitting in the State of Delaware, and each party agrees that it submits
 to the personal jurisdiction and venue of those courts and waives any
 objections. THE UNITED NATIONS CONVENTION ON CONTRACTS FOR THE INTERNATIONAL
 SALE OF GOODS (1980) IS SPECIFICALLY EXCLUDED AND WILL NOT APPLY TO THE SOFTWARE.
+
+==============================================================================
+12. Microsoft Visual C++ runtime 14.44.35211 (vc\vcruntime140.dll, vc\vcruntime140_1.dll,
+    vc\msvcp140.dll, vc\msvcp140_1.dll)
+==============================================================================
+
+Copyright (c) Microsoft Corporation. All rights reserved.
+License: Distributable Code under the Microsoft Software License Terms for Microsoft
+Visual Studio 2022. These files are listed as distributable in the Visual Studio 2022
+"Distributable Code" list (Visual C++ Runtime Files):
+https://learn.microsoft.com/visualstudio/releases/2022/redistribution
+
+These are the unmodified x64 Visual C++ 2015-2022 runtime libraries
+(Microsoft.VC143.CRT) that ONNX Runtime needs. LegendEye uses them only on PCs where
+Windows' own copy in System32 is missing or older; otherwise Windows' copy is used.
+Installing the Microsoft Visual C++ Redistributable (x64) from
+https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist keeps the runtime
+updated by Windows Update.
 
 ==============================================================================
 13. Valve OpenVR API 1.1.1 (openvr_api.dll)
