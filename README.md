@@ -11,16 +11,8 @@ https://github.com/user-attachments/assets/6669fe4a-ca21-4385-8b5a-49e3ea01fefb
 
 Eye tracking for VRChat on the **Bigscreen Beyond 2e**. Free to use.
 
-## What's new in 4.1.0
-- Every new calibration is put in use right away, and **Switch to my earlier calibration** flips between your newest and earlier one.
-- Advanced adds a brows-up sweep and a frown sweep when Brows is ticked, so gaze stays steadier while your brows move.
-- Simple's path is one smooth path you can resize in its preview.
-- **Spoken instructions** is On or Off, and calibration runs at one quicker pace.
-- Training carries on through a graphics driver reset and through SteamVR closing. If LegendEye closes mid-training, **Finish training** picks it up from the recording.
-- The training screen shows its stage, elapsed time and time left.
-- The chart and the time shown for each calibration follow the options you tick.
-- Every setting has a hover text, and settings that did nothing are gone.
-- **Calibrate again** takes you back to the setup.
+## What's new in 4.1.1
+- Widen's **Auto-adjust** is now off by default, and is switched off once for everyone. Over a play session it could drift and make relaxed eyes read as widened.
 
 Updating: replace LegendEye.exe. Your settings and calibration are kept.
 
@@ -29,8 +21,8 @@ Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation
 
 > Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
 
-> **VirusTotal (v4.1.0):** [1 of 69 security vendors flagged it](https://www.virustotal.com/gui/file/72097e26e0121ec0666e660e274642a6590856ea823cb7b344580c4ef2a428ef).  
-> SHA256: `72097e26e0121ec0666e660e274642a6590856ea823cb7b344580c4ef2a428ef`
+> **VirusTotal (v4.1.1):** [1 of 69 security vendors flagged it](https://www.virustotal.com/gui/file/34e0a417d5494e149d709de1b1f19708b5154a11c878464f64e96f5327a1fb0f).  
+> SHA256: `34e0a417d5494e149d709de1b1f19708b5154a11c878464f64e96f5327a1fb0f`
 >
 > The single hit is Trapmine "Malicious.moderate.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
 
