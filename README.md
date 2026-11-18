@@ -1,4 +1,6 @@
-![LegendEye](docs/hero_v5.png)
+![LegendEye](docs/hero_v2.png)
+
+![LegendEye 5.0: dynamic foveated rendering vs Bigscreen and Quad-Views-Foveated](docs/hero_v5.png)
 
 https://github.com/user-attachments/assets/e355732c-f763-4491-8cbc-104bee171a90
 
