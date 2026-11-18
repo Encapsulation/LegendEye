@@ -65,8 +65,10 @@ Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation
 
 > Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
 
-> **VirusTotal (v5.0.0):** [report](https://www.virustotal.com/gui/file/8f7dcdfef6f039bed1337bf4a66321a469b3702b30d521035c6594091df279cd)  
+> **VirusTotal (v5.0.0):** [1 of 70 security vendors flagged it](https://www.virustotal.com/gui/file/8f7dcdfef6f039bed1337bf4a66321a469b3702b30d521035c6594091df279cd).  
 > SHA256: `8f7dcdfef6f039bed1337bf4a66321a469b3702b30d521035c6594091df279cd`
+>
+> The single hit is Trapmine "Suspicious.low.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
 
 ## Requirements
 - Windows 10 or 11 (64-bit)
