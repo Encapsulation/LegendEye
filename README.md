@@ -1,4 +1,4 @@
-![LegendEye](docs/hero_v2.png)
+![LegendEye](docs/hero_v6.png)
 
 ![LegendEye 5.0: dynamic foveated rendering vs Bigscreen and Quad-Views-Foveated](docs/hero_v5.png)
 
@@ -75,31 +75,48 @@ Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation
 - Bigscreen Beyond 2e with its eye-tracking cameras
 - SteamVR
 - Turn off the eye tracking in the Bigscreen driver or software and close any other eye-tracking app. Only one app can use the cameras at a time.
+- Optional, for face tracking: a Babble camera or a VIVE Facial Tracker, and the face model from your own Babble or VIVE install
 
 ## Getting started
 1. Run LegendEye.exe and press **Start**. It talks to VRChat directly (OSC), with no extra software needed.
-2. Press **Calibrate**, pick **Simple** or **Advanced**, and tick the expressions to set up (widen, squint, brows). Follow the voice: keep your head still and follow the dot with your eyes. Simple takes about 3 minutes; then your personal eye model trains automatically and is used from then on.
+2. Press **Calibrate**. **Simple** with the default settings is recommended: widen and squint on, short brows, extra blinks off. Follow the voice: keep your head still and follow the dot with your eyes. It takes about 3 minutes, then your personal eye model trains. Training is much faster with SteamVR and VR games closed.
 3. Optional: let LegendEye start with SteamVR. It then waits in the tray, ready whenever you are.
 
 > Check the eye camera feeds in LegendEye before each session. The white glow near the edges is normal; dust, skin, and other contamination and debris near the center can cause issues, especially during calibration. If the center isn't clear, a lens puffer brush works best. Otherwise wipe gently with the included microfiber cloth; for stubborn debris, wrap the cloth over a blunted toothpick. Never use liquids or cleaning agents.
 
 ## Features
+### Eye tracking
 - Gaze, eyelids (with winks and blinks) and pupil size for any VRChat avatar with eye tracking
 - Widen, squint and brows, set up for your eyes in your calibration, each with its own switch, sensitivity, start point and output range
-- A head-still calibration that personalizes the eye model to you: Simple, or Advanced with paths fitted to your gaze range
-- Field of view check: how far your eyes turn and what each eye sees, as a report
-- Settings profiles, and a Reset button on every settings card
-- Easy mode with live readouts; Advanced mode with filters, per-eye lid tuning (closed / open levels), horizontal and vertical eye movement scale and limit, near convergence, and the avatar's pupil size and reaction
-- Closes the avatar's eyes when the headset is taken off
-- Skips torn camera frames when the USB cable loses data
-- Camera reconnects by itself after a USB drop or a headset replug
-- Pauses when SteamVR closes and resumes by itself
-- Dirty-lens warning
-- Optional calibration report in Export logs, so tracking problems can be fixed for your eyes
-- Runs on the GPU by default (DirectML: NVIDIA, AMD or Intel), with automatic CPU fallback; pick the GPU or the CPU in the settings
+- Closed eyes stay closed, and frowning or squinting pulls your gaze off much less
 
-## Using LegendEye with Babble (VRCFaceTracking)
-LegendEye talks to VRChat on its own. If you also use a mouth tracker such as Babble through VRCFaceTracking (VRCFT), install the LegendEye VRCFT module, so VRCFT combines LegendEye's eyes with Babble's mouth. VRChat accepts only one face tracking message at a time: without the module, the two overwrite each other.
+### Calibration
+- A head-still calibration that personalizes the eye model to you: Simple, or Advanced with paths fitted to your gaze range
+- Named calibrations: every calibration is kept, and you can switch, rename or delete them
+- Recenter with 1 or 5 dots, offered when you put the headset on
+- Field of view check: how far your eyes turn and what each eye sees, as a report
+
+### Face tracking
+- Babble cameras and the VIVE Facial Tracker, with the Babble model, the VIVE model, or both blended
+- Face smoothing, and the range and maximum sent for every face shape
+- Sends to VRChat directly, through VRCFaceTracking, or to other apps
+
+### Dynamic foveated rendering (DFR)
+- LegendEye's own SteamVR driver sends your gaze to games with built-in eye-tracked foveated rendering
+- LegendQuad adds eye-tracked foveated rendering to games that support quad views, such as DCS World, with presets and brightness match
+- LegendQuad blocks games with Easy Anti-Cheat or BattlEye unless you choose Allow anyway; it is recommended for single-player or offline games
+
+### App
+- Works with [LegendPanel](https://github.com/Encapsulation/LegendPanel), a VR performance panel that can also control LegendEye from inside VR
+- Settings profiles, and a Reset button on every settings card
+- Easy mode with live readouts; Advanced mode with filters, per-eye lid tuning, eye movement scale and limit, near convergence, and pupil size and reaction
+- Closes the avatar's eyes when the headset is taken off, and pauses when SteamVR closes
+- Camera reconnects by itself after a USB drop, skips torn frames, and warns about a dirty lens
+- Runs on the GPU by default (DirectML: NVIDIA, AMD or Intel), with automatic CPU fallback
+- Export logs makes a report zip for problems, with an optional calibration report
+
+## Using LegendEye with VRCFaceTracking (VRCFT)
+LegendEye does face tracking itself now (see Features). If you prefer to keep running a mouth tracker such as Babble through VRCFaceTracking (VRCFT), install the LegendEye VRCFT module, so VRCFT combines LegendEye's eyes with Babble's mouth. VRChat accepts only one face tracking message at a time: without the module, the two overwrite each other.
 1. Download `LegendEye-VRCFT-Module-1.1.0.zip` from the [module release](https://github.com/Encapsulation/LegendEye/releases/tag/vrcft-module-1.1.0) and install it in VRCFT: **Module Registry**, then the **Install from .zip** button next to the search box. Avatars set up for VRChat's native face tracking need a VRCFT version that sends it.
 2. In LegendEye, click **Advanced** (top right), open the **Output** tab, and in the **VRChat** box set **OSC port** to `9400` and **Native face** to **Always**.
 3. In VRCFT, uninstall or disable **Bigscreen's Beyond module** (it would take the eyes), and keep **LegendEye above Babble** in the module list. In Babble, turn its own eye tracking off. VRCFT's log shows whether LegendEye data arrives.
