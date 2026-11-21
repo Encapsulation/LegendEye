@@ -1,4 +1,4 @@
-![LegendEye 5.1.2](docs/hero_512.png)
+![LegendEye 5.1.4](docs/hero_514.png)
 
 ![LegendEye](docs/hero_v6.png)
 
@@ -15,23 +15,46 @@ https://github.com/user-attachments/assets/6669fe4a-ca21-4385-8b5a-49e3ea01fefb
 
 Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen Beyond 2e**. Free to use.
 
-## What's new in 5.1.3
+## What's new in 5.1.4
+
+**Full face tracking support for VIVE and Babble trackers.**
+- **Vive (default):** full support for the VIVE Facial Tracker, with less delay. The mouth opens fully when you talk.
+- **Babble (default):** full support for Babble trackers, official and DIY, with less delay.
+- **Focus 3 and XR Elite face trackers** through the VIVE runtime.
+- Tested on 8 avatar face tracking families, and works with VRChat native face tracking.
+- LegendEye's extras (Remember my face, Face smoothing, picture fixes, calibration) are off by default. Turn off Vive (default) or Babble (default) on the Face tab to use them.
+- With either default on, the face is no longer held at rest while the headset is off.
+
+The Babble model does the same job as Babble app, with less delay. If you used Babble app, LegendEye moves you to the Babble model. Close Baballonia so LegendEye can use the camera. Use Babble settings still brings over your crop, smoothing and calibration.
+
+**VIVE app is now VIVE runtime (Focus 3, XR Elite).** It is for:
+- Focus 3 and XR Elite face trackers: their lip data only arrives through the VIVE runtime over VIVE Business Streaming. The VIVE model needs the USB VIVE Facial Tracker camera, so for these trackers this source is the only way in.
+- Sharing the tracker: if another app needs the VIVE runtime, LegendEye can't take the camera. With this source, both work.
+
+For a VIVE Facial Tracker on its own, use VIVE model.
 
 #### Fixes
-- When SteamVR starts LegendEye, LegendEye now closes when SteamVR closes. Before, it stayed open after SteamVR closed, so Steam still showed SteamVR as running and the next launch failed with "already running". A LegendEye you open yourself stays open.
+- VIVE model: the mouth opens fully when you talk. Part of the jaw value from the tracker was left out.
+- VIVE runtime source finds the VIVE runtime's files. Before, it missed them on most setups.
+- Face tab: no red "no face camera" flash when switching the face source, and long status text no longer stretches the badges.
 
 ## ⬇️ Download
 
-<a href="https://github.com/Encapsulation/LegendEye/releases/latest/download/LegendEye.exe"><img src="docs/download-button.png" alt="Download Legend Eye 5.1.3" width="350"></a>
+<a href="https://github.com/Encapsulation/LegendEye/releases/latest/download/LegendEye.exe"><img src="docs/download-button.png" alt="Download Legend Eye 5.1.4" width="350"></a>
 
 One file: no installer, nothing to unpack. To update, replace the exe; your settings and calibrations are kept. [All releases](https://github.com/Encapsulation/LegendEye/releases)
 
-**VirusTotal (5.1.3):** [1 of 70 security vendors flagged it](https://www.virustotal.com/gui/file/701eb8ec84e611c21bbafeffd979df60e831cd860bc8ce479cc23b8b18794384)  
-SHA256: `701eb8ec84e611c21bbafeffd979df60e831cd860bc8ce479cc23b8b18794384`
+**VirusTotal (5.1.4):** [1 of 67 security vendors flagged it](https://www.virustotal.com/gui/file/0b646ee7d9357b5f1878338d546902a22bb7986cd496b0590364eabb5d43fa11)  
+SHA256: `0b646ee7d9357b5f1878338d546902a22bb7986cd496b0590364eabb5d43fa11`
 
 The single hit is Trapmine "Suspicious.low.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
 
 Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
+
+## What's new in 5.1.3
+
+#### Fixes
+- When SteamVR starts LegendEye, LegendEye now closes when SteamVR closes. Before, it stayed open after SteamVR closed, so Steam still showed SteamVR as running and the next launch failed with "already running". A LegendEye you open yourself stays open.
 
 ## What's new in 5.1.2
 
@@ -150,7 +173,9 @@ Your settings and calibrations are kept: just replace LegendEye.exe. If tracking
 - Field of view check: how far your eyes turn and what each eye sees, as a report
 
 ### Face tracking
-- Babble cameras and the VIVE Facial Tracker, with the Babble model, the VIVE model, or both blended
+- The VIVE Facial Tracker, VIVE Focus 3 and XR Elite face trackers (through the VIVE runtime), and Babble trackers, official and DIY
+- The VIVE model, the Babble model, or both blended (experimental)
+- Tested on 8 avatar face tracking families, and works with VRChat native face tracking
 - Face smoothing, and the range and maximum sent for every face shape, grouped by face region, with a per-shape Babble / VIVE mix in Both
 - Face camera preview and a live tracking preview (beta) with five characters
 - Sends to VRChat directly, through VRCFaceTracking, or to other apps
