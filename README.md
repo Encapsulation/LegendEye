@@ -1,3 +1,5 @@
+![LegendEye 5.1](docs/hero_51.png)
+
 ![LegendEye](docs/hero_v6.png)
 
 ![LegendEye 5.0: dynamic foveated rendering vs Bigscreen and Quad-Views-Foveated](docs/hero_v5.png)
@@ -13,60 +15,58 @@ https://github.com/user-attachments/assets/6669fe4a-ca21-4385-8b5a-49e3ea01fefb
 
 Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen Beyond 2e**. Free to use.
 
-## What's new in 5.0
+## What's new in 5.1
 
-Your existing calibration keeps working. Recalibrate to get the new improvements. Simple calibration with the default settings is recommended.
+**If you calibrated with 5.0, retrain your expressions.** 5.0's training set up widen with about half its range, so widen could feel weak or hard to trigger. 5.1 trains it correctly. Press **Retrain expressions** on the Calibrate tab (no headset needed, your gaze and blinks stay as they are), or do a new **Simple** calibration.
 
-### Dynamic foveated rendering (DFR)
-- LegendEye now sends your gaze to SteamVR through its own driver, so games with built-in eye-tracked foveated rendering use it directly (for example iRacing and Microsoft Flight Simulator 2024).
-- LegendQuad, our own quad-views layer, adds eye-tracked foveated rendering to games that support quad views, such as DCS World.
-- Quality, Balanced and Performance presets, plus Advanced sliders for sharp area size, outer detail, edge blend, sharpening, shape, vertical offset and hold time.
-- Brightness match keeps the sharp area and the outer view the same brightness, so the edge is harder to see.
-- LegendQuad only runs in games you start with LegendEye's Steam launch option or its "Launch with LegendQuad" button.
-- Launch with LegendQuad finds your Steam games automatically. Add a game adds any other game.
-- Warning: LegendQuad is recommended for single-player or offline games. Anti-cheat can flag or ban accounts for files loaded into a game, even ones that aren't cheats. LegendQuad blocks games with Easy Anti-Cheat or BattlEye unless you choose Allow anyway, at your own risk.
-- Gaze for foveation tools over OSC, such as PimaxMagic4All.
+Your settings and calibrations are kept: just replace LegendEye.exe. If tracking doesn't feel right with your old calibration, do a fresh one: try Simple first.
+
+### Calibration
+- Calibrate only your expressions: pick "Only the expressions above" to redo widen, squint and brows in about a minute. Your gaze and blinks stay as they are.
+- Retrain expressions: one button on the Calibrate tab sets up widen, squint and brows again from your last calibration's recording. No headset needed, and your gaze and blinks stay as they are.
+- Widen and squint steps guide you to open slowly to as wide as you can, and squint slowly to about three quarters.
+- The Calibrate tab recommends Simple first, and every user starts 5.1 on the recommended calibration settings. Your spoken instructions and pace choices are kept.
+- The Calibrations list shows what each calibration includes (gaze and blinks, or expressions only; widen, squint, brows) and its check result.
+
+### Eye tracking
+- Recenter with Space as well as the trigger, for sim racing and other games where your hands are off the controllers.
+- Nudge left/right and up/down (Advanced, Filter tab, under Recenter): shift your gaze by a few degrees after the recenter if it's off by the same amount everywhere. 0 by default, and every recenter sets it back to 0.
+- Advanced mode shows live widen, squint and brow levels for each eye.
+- Tracking rate on the Performance tab: Half tracks every other camera frame for about half the tracking work, for weaker GPUs or tracking on the CPU. Full is the default.
 
 ### Face tracking
-- Face tracking with the VIVE Facial Tracker and Babble cameras, using the Babble model, the VIVE model, or both blended.
-- Both (blend) trusts whichever model reads each face shape best.
-- Copy model buttons keep your own installed Babble or VIVE model inside LegendEye, so you can uninstall those apps afterward.
-- Face smoothing with a low lag to smooth slider and per-part strength.
-- Face output ranges let you set the range and maximum sent for every face shape.
-- Sends to VRChat directly, through VRCFaceTracking, or to other apps.
-
-### LegendPanel
-- Works with [LegendPanel](https://github.com/Encapsulation/LegendPanel), our new standalone VR performance panel.
-- LegendEye remote: pause, resume, recenter, face tracking, expressions, sending to the game, and foveated rendering presets from inside VR.
-- LegendEye feeds LegendPanel's eye-tracked menu.
-
-### Calibration and recenter
-- Recenter with 1 or 5 dots, offered when you put the headset on (on by default, 1 dot, click to start, adjustable wait).
-- Optional extra blinks step (off by default): close gently and squeeze at 5 or 9 dots, for eyes that open by themselves when shut.
-- Brows: Off, Short brows (default, frown and brows up at 5 dots so widen and squint ignore your brows) or full Brows.
-- Advanced uses 5 expression dots by default, or 9 if you pick it.
-- Named calibrations: every calibration is kept, and you can switch, rename or delete them on the Profiles tab.
-- All calibration dots use the same crosshair.
-
-### Tracking
-- Frowning and squinting pull your gaze off much less.
-- Closed eyes stay closed, and squeezing your eyes shut reads properly.
-- Raising or lowering your brows no longer shows up as widen or squint.
+- Tracking preview (beta): the Live tab can show a drawn face moving with everything LegendEye sends: gaze, lids, widen, squint, brows, pupil size, and with face tracking the jaw, lips, cheeks and tongue. Click the stats tiles to switch between the stats, a close view and the whole face, with the face camera picture beside it if you like. Five characters to pick from.
+- Face preview window: the face camera picture (one or both views of the VIVE Facial Tracker) next to the tracking preview (beta).
+- Face shapes window: shapes grouped by face region in sections you can open and close. In Both (blend), set how much of each shape comes from the Babble model and how much from the VIVE model, per shape or for a whole region, or leave it on Auto.
+- More face filter controls: the jaw on its own, how strongly tiny twitches are held still, and how quickly fast moves show.
+- Face smoothing default 0.70 for a steadier jaw, mouth corners and tongue. If you never changed it, 5.1 sets you to 0.70; your own setting is kept.
+- Swap tongue left and right: a switch on the Face tab for avatars whose tongue moves to the opposite side.
+- The VIVE model can use a network camera address.
+- The Face tab tells you when Baballonia is holding the face camera, or when VRCFaceTracking is running alongside LegendEye.
+- Find looks for Babble in more places.
 
 ### App
-- New Face and DFR tabs.
-- Memory protection: LegendEye waits or switches to the CPU instead of starting heavy work when your PC is low on memory.
-- Lower CPU use.
+- Per-avatar profiles (Profiles tab): link a saved profile to the avatar you are wearing, and LegendEye loads it whenever you change into that avatar. Avatars without a link keep your current settings, and a switch turns it off.
+- Lighter: eye tracking uses 107 MB of video memory (263 MB in 5.0), all models with face tracking 287 MB (432 MB), and about half the CPU, with the same tracking. Pupil size and the iris outline run on your GPU too.
+- The Live tab shows face tracking frames per second and the slowest 1 % of frame times, which shows stutter an average hides.
+- Face models on (Performance tab): run face tracking on a different GPU than eye tracking, or on the CPU. Same as eye tracking by default.
+- CPU cores and CPU priority (Performance tab): choose which cores LegendEye runs on and its priority, to experiment with. Defaults are unchanged.
+- Integrated GPUs work without extra memory set aside in the BIOS or graphics software; eye tracking uses about 75 MB there. In our tests a dedicated GPU was still faster and used less CPU (RTX 5090 vs the Ryzen 7 7800X3D's Radeon graphics), so the CPU and integrated GPU choices are marked experimental. Your PC may differ: try them and keep what works best.
+- When the eye cameras won't start, LegendEye names the apps that may be using them (the Bigscreen Beyond Utility's eye tracking, Babble, PaperTracker, EyeTrackVR, another LegendEye, or any app Windows lists as using a camera, such as Discord or OBS) and tells you what to close.
+- New version notice: when a newer LegendEye is out, an Update button in the top bar pulses to catch your eye and opens the download page. Nothing is downloaded by itself.
+- Copy diagnostics (About): a short summary of your setup and what LegendEye is doing, ready to paste into Discord. Nothing personal is included.
+- Export logs covers eye cameras and face tracking: camera open and stop events, face camera pictures (optional), what your avatar takes, your GPUs, memory and models, and recent status changes, so most problems can be found from one export.
 
-Updating: replace LegendEye.exe. Your settings and calibrations are kept.
+### Planned
+- Support for Resonite and ChilloutVR is planned for a future version.
 
 ## Download
 Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation/LegendEye/releases/latest). It's a single file: no installer, nothing to unpack.
 
 > Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
 
-> **VirusTotal (v5.0.0):** [1 of 70 security vendors flagged it](https://www.virustotal.com/gui/file/8f7dcdfef6f039bed1337bf4a66321a469b3702b30d521035c6594091df279cd).  
-> SHA256: `8f7dcdfef6f039bed1337bf4a66321a469b3702b30d521035c6594091df279cd`
+> **VirusTotal (v5.1.0):** [1 of 70 security vendors flagged it](https://www.virustotal.com/gui/file/0aeda937112b226d15f45933a3a6c93914ec24c9647200e1acc82438b1cabb91).  
+> SHA256: `0aeda937112b226d15f45933a3a6c93914ec24c9647200e1acc82438b1cabb91`
 >
 > The single hit is Trapmine "Suspicious.low.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
 
@@ -79,7 +79,7 @@ Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation
 
 ## Getting started
 1. Run LegendEye.exe and press **Start**. It talks to VRChat directly (OSC), with no extra software needed.
-2. Press **Calibrate**. **Simple** with the default settings is recommended: widen and squint on, short brows, extra blinks off. Follow the voice: keep your head still and follow the dot with your eyes. It takes about 3 minutes, then your personal eye model trains. Training is much faster with SteamVR and VR games closed.
+2. Press **Calibrate**. **Simple** with the default settings is recommended: widen and squint on, short brows, extra blinks off. Follow the voice: keep your head still and follow the dot with your eyes. It takes about 4 minutes, then your personal eye model trains. Training is much faster with SteamVR and VR games closed.
 3. Optional: let LegendEye start with SteamVR. It then waits in the tray, ready whenever you are.
 
 > Check the eye camera feeds in LegendEye before each session. The white glow near the edges is normal; dust, skin, and other contamination and debris near the center can cause issues, especially during calibration. If the center isn't clear, a lens puffer brush works best. Otherwise wipe gently with the included microfiber cloth; for stubborn debris, wrap the cloth over a blunted toothpick. Never use liquids or cleaning agents.
@@ -88,17 +88,20 @@ Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation
 ### Eye tracking
 - Gaze, eyelids (with winks and blinks) and pupil size for any VRChat avatar with eye tracking
 - Widen, squint and brows, set up for your eyes in your calibration, each with its own switch, sensitivity, start point and output range
+- Recenter with the trigger or Space, plus a small nudge if your gaze is off by the same amount everywhere
 - Closed eyes stay closed, and frowning or squinting pulls your gaze off much less
 
 ### Calibration
 - A head-still calibration that personalizes the eye model to you: Simple, or Advanced with paths fitted to your gaze range
 - Named calibrations: every calibration is kept, and you can switch, rename or delete them
+- Expressions-only calibration and Retrain expressions, to redo widen, squint and brows without a full calibration
 - Recenter with 1 or 5 dots, offered when you put the headset on
 - Field of view check: how far your eyes turn and what each eye sees, as a report
 
 ### Face tracking
 - Babble cameras and the VIVE Facial Tracker, with the Babble model, the VIVE model, or both blended
-- Face smoothing, and the range and maximum sent for every face shape
+- Face smoothing, and the range and maximum sent for every face shape, grouped by face region, with a per-shape Babble / VIVE mix in Both
+- Face camera preview and a live tracking preview (beta) with five characters
 - Sends to VRChat directly, through VRCFaceTracking, or to other apps
 
 ### Dynamic foveated rendering (DFR)
@@ -108,7 +111,7 @@ Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation
 
 ### App
 - Works with [LegendPanel](https://github.com/Encapsulation/LegendPanel), a VR performance panel that can also control LegendEye from inside VR
-- Settings profiles, and a Reset button on every settings card
+- Settings profiles, per-avatar profiles that load when you change avatars, and a Reset button on every settings card
 - Easy mode with live readouts; Advanced mode with filters, per-eye lid tuning, eye movement scale and limit, near convergence, and pupil size and reaction
 - Closes the avatar's eyes when the headset is taken off, and pauses when SteamVR closes
 - Camera reconnects by itself after a USB drop, skips torn frames, and warns about a dirty lens
