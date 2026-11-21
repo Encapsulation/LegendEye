@@ -19,6 +19,10 @@ Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen B
 
 **Tracking now starts when you press Start.** LegendEye remembers whether you left tracking on or off and opens the same way next time. After updating it opens stopped once, so press **Start** the first time.
 
+The "Start tracking on launch" switch on the Output tab is gone: Start and Stop are remembered instead.
+
+**SteamVR needs to be running for tracking.** If you press Start with SteamVR closed, LegendEye waits and shows "paused - SteamVR off" until SteamVR starts (with "Pause when headset is off" on, the default).
+
 #### Fixes
 - With the face camera set to "both views" on the Live tab, the character and camera buttons stay in view.
 - Export logs notes when SteamVR starts, to help track down what launched it.
