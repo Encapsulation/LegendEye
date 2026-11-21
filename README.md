@@ -15,6 +15,16 @@ https://github.com/user-attachments/assets/6669fe4a-ca21-4385-8b5a-49e3ea01fefb
 
 Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen Beyond 2e**. Free to use.
 
+## What's new in 5.1.1
+
+**Tracking now starts when you press Start.** LegendEye remembers whether you left tracking on or off and opens the same way next time. After updating it opens stopped once, so press **Start** the first time.
+
+#### Fixes
+- With the face camera set to "both views" on the Live tab, the character and camera buttons stay in view.
+- Export logs notes when SteamVR starts, to help track down what launched it.
+
+Updating: replace LegendEye.exe. Your settings and calibrations are kept. If you calibrated with 5.0, press **Retrain expressions** on the Calibrate tab or do a new **Simple** calibration.
+
 ## What's new in 5.1
 
 **If you calibrated with 5.0, retrain your expressions.** 5.0's training set up widen with about half its range, so widen could feel weak or hard to trigger. 5.1 trains it correctly. Press **Retrain expressions** on the Calibrate tab (no headset needed, your gaze and blinks stay as they are), or do a new **Simple** calibration.
@@ -65,8 +75,8 @@ Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation
 
 > Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
 
-> **VirusTotal (v5.1.0):** [1 of 70 security vendors flagged it](https://www.virustotal.com/gui/file/0aeda937112b226d15f45933a3a6c93914ec24c9647200e1acc82438b1cabb91).  
-> SHA256: `0aeda937112b226d15f45933a3a6c93914ec24c9647200e1acc82438b1cabb91`
+> **VirusTotal (v5.1.1):** [1 of 69 security vendors flagged it](https://www.virustotal.com/gui/file/53c2e848c5a8f4b2cadabc613743a81d1224a7c9ea26e411182d572c1c4cad2a).  
+> SHA256: `53c2e848c5a8f4b2cadabc613743a81d1224a7c9ea26e411182d572c1c4cad2a`
 >
 > The single hit is Trapmine "Suspicious.low.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
 
