@@ -1,4 +1,4 @@
-![LegendEye 5.1](docs/hero_51.png)
+![LegendEye 5.1.2](docs/hero_512.png)
 
 ![LegendEye](docs/hero_v6.png)
 
@@ -14,6 +14,48 @@ https://github.com/user-attachments/assets/6669fe4a-ca21-4385-8b5a-49e3ea01fefb
 
 
 Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen Beyond 2e**. Free to use.
+
+## What's new in 5.1.2
+
+**Cleaner menus.** Tabs are now Live, Eyes, Lids, Face, Output, DFR, Profiles and Settings, all on one header row as pills, with the same pills for every sub-tab. Output holds VRChat and VRChat avatar (Resonite and ChilloutVR coming). Settings holds App, Performance and Recording. Calibrate and Align share one **Calibrate** button: yellow until you calibrate, green after. Easy and Advanced are in the **Mode** menu.
+
+**USB face cameras work better (DIY and other non-VIVE cameras).**
+- Cameras start in their own default mode, the way Babble opens them. A mode that keeps failing is skipped instead of dropping to 2 fps.
+- **Camera mode** on the Face tab: Auto, or pick one of the camera's own modes (the best few are listed).
+- **Camera picture** on the Face tab: rotate, flip, crop each edge, brightness and contrast, live for every face model and the preview. **Reset picture** puts it back.
+- Nothing is taken from Babble's settings by default. Turn on **Use Babble settings** if you want Babble's crop and calibration.
+- Virtual cameras open at their fastest frame rate.
+- Widen and squint react properly on cameras under 60 fps.
+
+**Live tab.** Bigger eye feeds. The tracking preview sits wide above the face camera, which keeps its real 4:3 shape. Click the preview to cycle stats, mouth zoom, lower face and full head. With face tracking on, it starts in the mouth zoom with the camera. The character and camera pickers are on the Face tab now.
+
+**Face tab.** Two boxes: FACE MODEL (source, a colored model badge and a tracking badge, Find / Browse / More) and CAMERA. Face preview opens docked under the window. Face shapes opens beside it, and only once.
+
+**Face rests with the headset off.** When LegendEye sees the headset is off, face tracking pauses too and the face goes neutral, so the mouth doesn't move from whatever the face camera sees. It starts again when you put the headset back on.
+
+**Experimental: VIVE model on a non-VIVE camera.** Model blend now runs the Babble model alone on USB cameras. Turn on **VIVE model too (test)** to also try the VIVE model on that camera.
+
+**Export logs** now shows the eye camera's listed, arriving and new-picture frame rates, and includes dfr.log, to help with custom trackers.
+
+**Recording.** A **Browse...** button picks the record folder.
+
+#### Fixes
+- Readouts no longer show "-+0.00".
+- Right after Start, the eye outlines and the tracking preview wait until your eyes are seen, instead of jumping around.
+- Windows 3.1 theme: the Face tab's camera buttons and box titles show in full.
+
+## ⬇️ Download
+
+<a href="https://github.com/Encapsulation/LegendEye/releases/latest/download/LegendEye.exe"><img src="docs/download-button.png" alt="Download Legend Eye 5.1.2" width="350"></a>
+
+One file: no installer, nothing to unpack. To update, replace the exe; your settings and calibrations are kept. [All releases](https://github.com/Encapsulation/LegendEye/releases)
+
+**VirusTotal (5.1.2):** [1 of 70 security vendors flagged it](https://www.virustotal.com/gui/file/782a65b1bf4a0b87303a57244284835cc89bb62b039b836959f9bb57e0407383)  
+SHA256: `782a65b1bf4a0b87303a57244284835cc89bb62b039b836959f9bb57e0407383`
+
+The single hit is Trapmine "Suspicious.low.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
+
+Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
 
 ## What's new in 5.1.1
 
@@ -73,16 +115,6 @@ Your settings and calibrations are kept: just replace LegendEye.exe. If tracking
 
 ### Planned
 - Support for Resonite and ChilloutVR is planned for a future version.
-
-## Download
-Get **LegendEye.exe** from the [latest release](https://github.com/Encapsulation/LegendEye/releases/latest). It's a single file: no installer, nothing to unpack.
-
-> Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
-
-> **VirusTotal (v5.1.1):** [1 of 69 security vendors flagged it](https://www.virustotal.com/gui/file/53c2e848c5a8f4b2cadabc613743a81d1224a7c9ea26e411182d572c1c4cad2a).  
-> SHA256: `53c2e848c5a8f4b2cadabc613743a81d1224a7c9ea26e411182d572c1c4cad2a`
->
-> The single hit is Trapmine "Suspicious.low.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
 
 ## Requirements
 - Windows 10 or 11 (64-bit)
