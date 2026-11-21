@@ -15,6 +15,24 @@ https://github.com/user-attachments/assets/6669fe4a-ca21-4385-8b5a-49e3ea01fefb
 
 Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen Beyond 2e**. Free to use.
 
+## What's new in 5.1.3
+
+#### Fixes
+- When SteamVR starts LegendEye, LegendEye now closes when SteamVR closes. Before, it stayed open after SteamVR closed, so Steam still showed SteamVR as running and the next launch failed with "already running". A LegendEye you open yourself stays open.
+
+## ⬇️ Download
+
+<a href="https://github.com/Encapsulation/LegendEye/releases/latest/download/LegendEye.exe"><img src="docs/download-button.png" alt="Download Legend Eye 5.1.3" width="350"></a>
+
+One file: no installer, nothing to unpack. To update, replace the exe; your settings and calibrations are kept. [All releases](https://github.com/Encapsulation/LegendEye/releases)
+
+**VirusTotal (5.1.3):** [1 of 70 security vendors flagged it](https://www.virustotal.com/gui/file/701eb8ec84e611c21bbafeffd979df60e831cd860bc8ce479cc23b8b18794384)  
+SHA256: `701eb8ec84e611c21bbafeffd979df60e831cd860bc8ce479cc23b8b18794384`
+
+The single hit is Trapmine "Suspicious.low.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
+
+Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
+
 ## What's new in 5.1.2
 
 **Cleaner menus.** Tabs are now Live, Eyes, Lids, Face, Output, DFR, Profiles and Settings, all on one header row as pills, with the same pills for every sub-tab. Output holds VRChat and VRChat avatar (Resonite and ChilloutVR coming). Settings holds App, Performance and Recording. Calibrate and Align share one **Calibrate** button: yellow until you calibrate, green after. Easy and Advanced are in the **Mode** menu.
@@ -43,19 +61,6 @@ Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen B
 - Readouts no longer show "-+0.00".
 - Right after Start, the eye outlines and the tracking preview wait until your eyes are seen, instead of jumping around.
 - Windows 3.1 theme: the Face tab's camera buttons and box titles show in full.
-
-## ⬇️ Download
-
-<a href="https://github.com/Encapsulation/LegendEye/releases/latest/download/LegendEye.exe"><img src="docs/download-button.png" alt="Download Legend Eye 5.1.2" width="350"></a>
-
-One file: no installer, nothing to unpack. To update, replace the exe; your settings and calibrations are kept. [All releases](https://github.com/Encapsulation/LegendEye/releases)
-
-**VirusTotal (5.1.2):** [1 of 70 security vendors flagged it](https://www.virustotal.com/gui/file/782a65b1bf4a0b87303a57244284835cc89bb62b039b836959f9bb57e0407383)  
-SHA256: `782a65b1bf4a0b87303a57244284835cc89bb62b039b836959f9bb57e0407383`
-
-The single hit is Trapmine "Suspicious.low.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
-
-Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
 
 ## What's new in 5.1.1
 
