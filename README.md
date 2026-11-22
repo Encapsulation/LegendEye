@@ -15,6 +15,28 @@ https://github.com/user-attachments/assets/6669fe4a-ca21-4385-8b5a-49e3ea01fefb
 
 Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen Beyond 2e**. Free to use.
 
+## What's new in 5.1.5
+
+#### Fixes
+- VIVE Facial Tracker: face tracking could stop after a settings change, and stay stopped. LegendEye now pauses before it reopens the tracker, waits longer while the tracker is busy, and tries again if it does not answer.
+- When a face camera is open but sends no picture for 3 seconds, LegendEye reopens it by itself. Before, face tracking stayed stopped until you restarted it.
+- Changing a setting on the Face tab restarts tracking once. Before, some changes restarted it twice in a row.
+- Vive (default) and Babble (default): blank camera frames are skipped. Before, one blank frame could mute the mouth for half a second.
+- Export logs: the face camera lines also show unusable frames and camera reopens.
+
+## ⬇️ Download
+
+<a href="https://github.com/Encapsulation/LegendEye/releases/latest/download/LegendEye.exe"><img src="docs/download-button.png" alt="Download Legend Eye 5.1.5" width="350"></a>
+
+One file: no installer, nothing to unpack. To update, replace the exe; your settings and calibrations are kept. [All releases](https://github.com/Encapsulation/LegendEye/releases)
+
+**VirusTotal (5.1.5):** [1 of 70 security vendors flagged it](https://www.virustotal.com/gui/file/44a118794f8e228007639ed1190985b8f6148eff3cbb0a4ab5661877ccc83116)  
+SHA256: `44a118794f8e228007639ed1190985b8f6148eff3cbb0a4ab5661877ccc83116`
+
+The single hit is Trapmine "Suspicious.low.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
+
+Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
+
 ## What's new in 5.1.4
 
 **Full face tracking support for VIVE and Babble trackers.**
@@ -37,19 +59,6 @@ For a VIVE Facial Tracker on its own, use VIVE model.
 - VIVE model: the mouth opens fully when you talk. Part of the jaw value from the tracker was left out.
 - VIVE runtime source finds the VIVE runtime's files. Before, it missed them on most setups.
 - Face tab: no red "no face camera" flash when switching the face source, and long status text no longer stretches the badges.
-
-## ⬇️ Download
-
-<a href="https://github.com/Encapsulation/LegendEye/releases/latest/download/LegendEye.exe"><img src="docs/download-button.png" alt="Download Legend Eye 5.1.4" width="350"></a>
-
-One file: no installer, nothing to unpack. To update, replace the exe; your settings and calibrations are kept. [All releases](https://github.com/Encapsulation/LegendEye/releases)
-
-**VirusTotal (5.1.4):** [1 of 67 security vendors flagged it](https://www.virustotal.com/gui/file/0b646ee7d9357b5f1878338d546902a22bb7986cd496b0590364eabb5d43fa11)  
-SHA256: `0b646ee7d9357b5f1878338d546902a22bb7986cd496b0590364eabb5d43fa11`
-
-The single hit is Trapmine "Suspicious.low.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
-
-Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
 
 ## What's new in 5.1.3
 
