@@ -15,6 +15,25 @@ https://github.com/user-attachments/assets/6669fe4a-ca21-4385-8b5a-49e3ea01fefb
 
 Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen Beyond 2e**. Free to use.
 
+## What's new in 5.1.9
+
+#### Fixes
+- Eye cameras other than the Beyond's own (custom eye trackers): LegendEye now opens the camera at its fastest frame rate. Before, it used the camera's default mode, so a camera that defaults to 30 fps ran at 30 even when it can do 60. The stock Beyond eye cameras already open at their fastest (90 fps) and are unchanged.
+- Export logs: the camera log now lists every mode the eye camera offers.
+
+## ⬇️ Download
+
+<a href="https://github.com/Encapsulation/LegendEye/releases/latest/download/LegendEye.exe"><img src="docs/download-button.png" alt="Download Legend Eye 5.1.9" width="350"></a>
+
+One file: no installer, nothing to unpack. To update, replace the exe; your settings and calibrations are kept. [All releases](https://github.com/Encapsulation/LegendEye/releases)
+
+**VirusTotal (5.1.9):** [1 of 70 security vendors flagged it](https://www.virustotal.com/gui/file/6c6db4cb8857e03d96a167241d1944a9db3dec63ad9ee41d75dbeacfc3e0a7db)  
+SHA256: `6c6db4cb8857e03d96a167241d1944a9db3dec63ad9ee41d75dbeacfc3e0a7db`
+
+The single hit is Trapmine "Suspicious.low.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
+
+Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
+
 ## What's new in 5.1.8
 
 #### Fixes
@@ -23,19 +42,6 @@ Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen B
 - VIVE Facial Tracker: recovering from a tracker that stops sending pictures is more reliable. In rare cases LegendEye could crash, or keep the tracker busy, after a stall.
 - Eye cameras running at 60 fps: eyelid smoothing always uses the camera's real frame rate. 5.1.7 did not always catch 60 fps cameras.
 - Changing a setting and then the camera or source right after no longer restarts tracking with the previous camera.
-
-## ⬇️ Download
-
-<a href="https://github.com/Encapsulation/LegendEye/releases/latest/download/LegendEye.exe"><img src="docs/download-button.png" alt="Download Legend Eye 5.1.8" width="350"></a>
-
-One file: no installer, nothing to unpack. To update, replace the exe; your settings and calibrations are kept. [All releases](https://github.com/Encapsulation/LegendEye/releases)
-
-**VirusTotal (5.1.8):** [1 of 69 security vendors flagged it](https://www.virustotal.com/gui/file/9260b4154315038a98d8d61481f9d2384f5da9ffaa0fe7bcc7febd4939064338)  
-SHA256: `9260b4154315038a98d8d61481f9d2384f5da9ffaa0fe7bcc7febd4939064338`
-
-The single hit is Trapmine "Suspicious.low.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
-
-Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
 
 ## What's new in 5.1.7
 
