@@ -15,12 +15,6 @@ https://github.com/user-attachments/assets/6669fe4a-ca21-4385-8b5a-49e3ea01fefb
 
 Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen Beyond 2e**. Free to use.
 
-## What's new in 5.1.9
-
-#### Fixes
-- Eye cameras other than the Beyond's own (custom eye trackers): LegendEye now opens the camera at its fastest frame rate. Before, it used the camera's default mode, so a camera that defaults to 30 fps ran at 30 even when it can do 60. The stock Beyond eye cameras already open at their fastest (90 fps) and are unchanged.
-- Export logs: the camera log now lists every mode the eye camera offers.
-
 ## ⬇️ Download
 
 <a href="https://github.com/Encapsulation/LegendEye/releases/latest/download/LegendEye.exe"><img src="docs/download-button.png" alt="Download Legend Eye 5.1.9" width="350"></a>
@@ -33,6 +27,12 @@ SHA256: `6c6db4cb8857e03d96a167241d1944a9db3dec63ad9ee41d75dbeacfc3e0a7db`
 The single hit is Trapmine "Suspicious.low.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
 
 Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
+
+## What's new in 5.1.9
+
+#### Fixes
+- Eye cameras other than the Beyond's own (custom eye trackers): LegendEye now opens the camera at its fastest frame rate. Before, it used the camera's default mode, so a camera that defaults to 30 fps ran at 30 even when it can do 60. The stock Beyond eye cameras already open at their fastest (90 fps) and are unchanged.
+- Export logs: the camera log now lists every mode the eye camera offers.
 
 ## What's new in 5.1.8
 
