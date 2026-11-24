@@ -23,7 +23,6 @@ Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen B
 #### Resonite
 - Eye and face tracking in Resonite, through Resonite's built-in face and eye tracking. No mod needed.
 - Sends gaze, blinks, widen, pupil size and the full mouth: jaw, lips, cheeks and tongue.
-- Your avatar's eyes turn exactly as far as yours. Babble sends gaze as an angle (1 = 45°), but Resonite and ChilloutVR read it as a direction, so with Babble a 22.5° look shows as 30° and a 45° look as 90°. LegendEye turns its gaze into the direction both games expect, so a 22.5° look shows as 22.5°.
 - Squint and brows go out too. Resonite shows them with the BaballoniaEyeExpressions mod (needs ResoniteModLoader).
 - Setup: if Babble isn't installed on your PC, add `-ForceBabble` to Resonite's launch options in Steam once. The Resonite tab under Output tells you whether you need it.
 - LegendEye sends only while Resonite is running. Turn it off on the Resonite tab.
@@ -31,7 +30,6 @@ Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen B
 #### ChilloutVR
 - Eye and face tracking in ChilloutVR, through ChilloutVR's built-in OSC face and eye tracking. No mod needed.
 - Sends gaze, blinks, widen, squint, brows, pupil size and the full mouth: jaw, lips, cheeks and tongue.
-- Your avatar's eyes turn exactly as far as yours, with the same gaze conversion as Resonite (no overshoot).
 - Sends only the 77 values ChilloutVR reads, so none get dropped, even when the frame rate dips.
 - Setup in ChilloutVR: Settings > Implementation > OSC on, then set Eye Tracking Module and Mouth Tracking Module to OSC. On each avatar, turn on CVR/Face Tracking in the Quick Menu's Advanced Avatars page.
 - Winks need an avatar with separate left and right blinks. How far the eyes turn is limited by each avatar's own eye settings.
