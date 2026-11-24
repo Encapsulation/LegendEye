@@ -1,4 +1,4 @@
-![LegendEye: eye tracking, face tracking and foveated rendering for the Bigscreen Beyond 2e](docs/hero.png)
+![LegendEye: eye tracking, face tracking and foveated rendering for the Bigscreen Beyond 2e](docs/hero_52.png)
 
 ## ⬇️ Download
 
