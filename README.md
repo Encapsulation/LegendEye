@@ -2,12 +2,12 @@
 
 ## ⬇️ Download
 
-<a href="https://github.com/Encapsulation/LegendEye/releases/latest/download/LegendEye.exe"><img src="docs/download-button.png" alt="Download Legend Eye 5.1.9" width="350"></a>
+<a href="https://github.com/Encapsulation/LegendEye/releases/latest/download/LegendEye.exe"><img src="docs/download-button.png" alt="Download Legend Eye 5.2.0" width="353"></a>
 
 One file: no installer, nothing to unpack. To update, replace the exe; your settings and calibrations are kept. [All releases](https://github.com/Encapsulation/LegendEye/releases)
 
-**VirusTotal (5.1.9):** [1 of 70 security vendors flagged it](https://www.virustotal.com/gui/file/6c6db4cb8857e03d96a167241d1944a9db3dec63ad9ee41d75dbeacfc3e0a7db)  
-SHA256: `6c6db4cb8857e03d96a167241d1944a9db3dec63ad9ee41d75dbeacfc3e0a7db`
+**VirusTotal (5.2.0):** [1 of 69 security vendors flagged it](https://www.virustotal.com/gui/file/dae60a5a4243404ba7ad669e947258b56a28210557ee1727e5bb78ed5872d55b)  
+SHA256: `dae60a5a4243404ba7ad669e947258b56a28210557ee1727e5bb78ed5872d55b`
 
 The single hit is Trapmine "Suspicious.low.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
 
@@ -16,7 +16,28 @@ Windows may show "Windows protected your PC" the first time, because the app isn
 # LegendEye
 
 
-Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen Beyond 2e**. Free to use.
+Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen Beyond 2e**, in VRChat, Resonite and ChilloutVR. Free to use.
+
+## What's new in 5.2
+
+#### Resonite
+- Eye and face tracking in Resonite, through Resonite's built-in face and eye tracking. No mod needed.
+- Sends gaze, blinks, widen, pupil size and the full mouth: jaw, lips, cheeks and tongue.
+- Your avatar's eyes turn exactly as far as yours. Babble sends gaze as an angle (1 = 45°), but Resonite and ChilloutVR read it as a direction, so with Babble a 22.5° look shows as 30° and a 45° look as 90°. LegendEye turns its gaze into the direction both games expect, so a 22.5° look shows as 22.5°.
+- Squint and brows go out too. Resonite shows them with the BaballoniaEyeExpressions mod (needs ResoniteModLoader).
+- Setup: if Babble isn't installed on your PC, add `-ForceBabble` to Resonite's launch options in Steam once. The Resonite tab under Output tells you whether you need it.
+- LegendEye sends only while Resonite is running. Turn it off on the Resonite tab.
+
+#### ChilloutVR
+- Eye and face tracking in ChilloutVR, through ChilloutVR's built-in OSC face and eye tracking. No mod needed.
+- Sends gaze, blinks, widen, squint, brows, pupil size and the full mouth: jaw, lips, cheeks and tongue.
+- Your avatar's eyes turn exactly as far as yours, with the same gaze conversion as Resonite (no overshoot).
+- Sends only the 77 values ChilloutVR reads, so none get dropped, even when the frame rate dips.
+- Setup in ChilloutVR: Settings > Implementation > OSC on, then set Eye Tracking Module and Mouth Tracking Module to OSC. On each avatar, turn on CVR/Face Tracking in the Quick Menu's Advanced Avatars page.
+- Winks need an avatar with separate left and right blinks. How far the eyes turn is limited by each avatar's own eye settings.
+- LegendEye sends to ChilloutVR while it is running and VRChat isn't. Turn it off on the ChilloutVR tab.
+
+Both games were tested on real eye and face recordings and live in game.
 
 ## What's new in 5.1.9
 
