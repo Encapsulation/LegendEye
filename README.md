@@ -2,12 +2,12 @@
 
 ## ⬇️ Download
 
-<a href="https://github.com/Encapsulation/LegendEye/releases/latest/download/LegendEye.exe"><img src="docs/download-button.png" alt="Download Legend Eye 5.2.0" width="353"></a>
+<a href="https://github.com/Encapsulation/LegendEye/releases/latest/download/LegendEye.exe"><img src="docs/download-button.png" alt="Download LegendEye" width="353"></a>
 
 One file: no installer, nothing to unpack. To update, replace the exe; your settings and calibrations are kept. [All releases](https://github.com/Encapsulation/LegendEye/releases)
 
 **VirusTotal (5.2.0):** [1 of 69 security vendors flagged it](https://www.virustotal.com/gui/file/dae60a5a4243404ba7ad669e947258b56a28210557ee1727e5bb78ed5872d55b)  
-SHA256: `dae60a5a4243404ba7ad669e947258b56a28210557ee1727e5bb78ed5872d55b`
+SHA256 (5.2.1): `9bb953cc5fe5be08647c50b67e2ff07113620e77b0712604ce266371c780c221`
 
 The single hit is Trapmine "Suspicious.low.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
 
