@@ -1,4 +1,4 @@
-![LegendEye: eye tracking, face tracking and foveated rendering for the Bigscreen Beyond 2e](docs/hero_52.png)
+![LegendEye: eye tracking, face tracking and foveated rendering for the Bigscreen Beyond 2e](docs/hero_53.png)
 
 ## ⬇️ Download
 
@@ -6,17 +6,23 @@
 
 One file: no installer, nothing to unpack. To update, replace the exe; your settings and calibrations are kept. [All releases](https://github.com/Encapsulation/LegendEye/releases)
 
-**VirusTotal (5.2.0):** [1 of 69 security vendors flagged it](https://www.virustotal.com/gui/file/dae60a5a4243404ba7ad669e947258b56a28210557ee1727e5bb78ed5872d55b)  
-SHA256 (5.2.1): `9bb953cc5fe5be08647c50b67e2ff07113620e77b0712604ce266371c780c221`
-
-The single hit is Trapmine "Suspicious.low.ml.score": a machine-learning guess, not a malware signature. It is triggered by how LegendEye ships: one self-contained EXE with its models and runtime packed inside, which looks unusual to generic scanners. Microsoft Defender and every major antivirus report it clean.
+**VirusTotal (5.3.0):** [0 of 64 security vendors flagged it](https://www.virustotal.com/gui/file/f8a2af9d183d23351bf86a664820e7d2f27ff016aa2e3267cbd048f49a1fab6d)  
+SHA256 (5.3.0): `f8a2af9d183d23351bf86a664820e7d2f27ff016aa2e3267cbd048f49a1fab6d`
 
 Windows may show "Windows protected your PC" the first time, because the app isn't code-signed yet. Click **More info**, then **Run anyway**.
 
 # LegendEye
 
 
-Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen Beyond 2e**, in VRChat, Resonite and ChilloutVR. Free to use.
+Eye tracking, face tracking and dynamic foveated rendering for the **Bigscreen Beyond 2e**, in VRChat, Resonite and ChilloutVR. In 15 languages. Free to use.
+
+## What's new in 5.3
+
+- LegendEye in 15 languages: English, Japanese, Chinese (Simplified and Traditional), Korean, German, French, Spanish, Italian, Portuguese (Brazil), Russian, Polish, Ukrainian, Indonesian and Thai. It starts in your Windows language. Change it any time with the globe button at the top.
+- The calibration voice speaks your language too, and the captions in VR show in every script.
+- Guided mouth calibration (experimental) for the Babble and VIVE models: LegendEye asks for one face at a time and sets each mouth shape's range itself. No sliders. In Model blend it calibrates both models at once. Face tab > Mouth calibration > Guided calibration.
+- Calibration training works on graphics cards with less video memory: when the card can't fit the usual training, LegendEye trains in smaller pieces with the same result, using about a third less video memory. Training takes longer on those cards.
+- The recenter dot no longer appears each time you put the headset on. To bring it back: switch the mode button at the top right to Advanced, open the Filter tab, and tick "Recenter when I put it on" in the Gaze Correction card. "Recenter now" works any time either way.
 
 ## What's new in 5.2
 
